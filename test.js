@@ -1,15 +1,13 @@
-// Temperature Converter using map()
+const assert = require("assert");
 
-const celsius = [0, 20, 30, 40];
+const fahrenheit = require("./index");
 
-// TODO:
-// Convert the Celsius temperatures to Fahrenheit
-// Formula: (C * 9/5) + 32
-// Use the map() function and store the result in fahrenheit.
+const expected = [32, 68, 86, 104];
 
-let fahrenheit = [];
+assert.deepStrictEqual(
+    fahrenheit,
+    expected,
+    "Incorrect Fahrenheit conversion using map()."
+);
 
-fahrenheit = celsius.map(c => (c * 9/5) + 32);
-
-// Do not modify this line
-module.exports = fahrenheit;
+console.log("All tests passed!");
